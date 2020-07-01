@@ -4,17 +4,17 @@
 
 ## interface模块说明
 
-sampler:负责数据采样相关
+sampler: dataset sampling
 
-spliter:负责数据拆分相关
+spliter:split dataset
 
-transformer:负责特征工程相关
+transformer:feature engineering
 
-filter:负责特征选择
+filter:feature selecting
 
-optimizer:负责超参优化
+optimizer:optimize params
 
-trainer:负责模型训练
+trainer:train model
 
 ## 代码架构说明
 
