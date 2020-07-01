@@ -8,7 +8,7 @@ dill==0.2.8.2
 bayesian-optimization==0.6.0
 category_encoders==1.2.8
 graphviz==0.8.4
-flask==0.12.2
+flask>=1.0.0
 simplejson==3.16.0
 xgboost==0.72.1
 flask_script==2.0.6
@@ -17,7 +17,7 @@ h5py==2.7.1
 catboost==0.9.1.1
 lifelines==0.14.6
 lightgbm==2.1.2
-tensorflow==1.14.0
+tensorflow>=1.15.2
 keras==2.2.4
 skope-rules==1.0.0
 presto-python-client==0.5.1
