@@ -18,12 +18,12 @@ trainer:train model
 
 ## 代码架构说明
 
-interface层：负责对外交互，入参为json，转换为对应的算法服务需求，调用对应的算法服务
+interface层：Responsible for external interaction, the input parameter is json, converted to the corresponding algorithm service demand, and the corresponding algorithm service is called.
 
-service层：按照功能分为两部分
+service层：Divided into two parts according to function
 
- * 算法服务的主接口，负责功能分发，调用相关encoder进行运算
- * 算法服务独立组件（encoder）
+ * The main interface of the algorithm service, responsible for function distribution, calling the relevant encoder for calculation
+ * Algorithm Service Independent Components（encoder）
 
 调用接口层->调用对应服务主接口->调用算法组件计算
 
