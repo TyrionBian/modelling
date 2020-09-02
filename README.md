@@ -58,9 +58,9 @@ encoder配置一律服从如下格式：
 
 ```json
 {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'test': '/Users/muzhen/dev/flow_0/spliter/test/spliter_result.pkl',
-  'train': '/Users/muzhen/dev/flow_0/spliter/train/spliter_result.pkl'},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/transformer'},
+  'test': '',
+  'train': ''},
+ 'out': {'dst': '/Users/dev/flow_0/transformer'},
  'st': {'cate': [{'cols': [],
     'encoders': [{'method': 'BaseEncoder',
       'params': {'cate_thr': 0.5, 'missing_thr': 0.8, 'same_thr': 0.9}},
@@ -93,7 +93,7 @@ st用于传入功能需求，比如需要使用什么样的算法进行运算。
 * 使用默认参数
 
   ```json
-  test_path = '/Users/muzhen/repo/modelling/modelling/data/xk_v4_data.pkl'
+  test_path = ''
   modelling.chaintest(test_path, label='14d', app_f=False, optimizer_f=False, custom_params=None, sampler_f=False)
   ```
 
@@ -104,10 +104,10 @@ st用于传入功能需求，比如需要使用什么样的算法进行运算。
   ```python
   import modelling
   
-  test_path = '/Users/muzhen/repo/modelling/modelling/data/xk_v4_data.pkl'
+  test_path = ''
   label = '14d'
   label_col = 'overdue_days'
-  dst = '/Users/muzhen/repo/modelling/modelling/flow'
+  dst = ''
   
   
   params = {'filter': {'ds': {'label': {'name': label, 'type': 'number'},
@@ -282,10 +282,10 @@ thr: float or int. default=0.5。if float, 抽样后样本量不能小于样本*
 
 ```python
 params['sampler'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'table': '/Users/muzhen/repo/modelling/modelling/data/xk_v4_data.pkl',
+  'table': '',
   'test': None,
   'train': None},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/sampler'},
+ 'out': {'dst': ''},
  'st': {'base_df': None,
   'base_df_key': 'level',
   'get_group_data': None,
@@ -349,10 +349,10 @@ group_key: 分层抽样字段
 
 ```python
 params['spliter'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'table': '/Users/muzhen/repo/modelling/modelling/data/xk_v4_data.pkl',
+  'table': '',
   'test': None,
   'train': None},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/spliter'},
+ 'out': {'dst': '/Users/dev/flow_0/spliter'},
  'st': {'group_key': None,
   'index_col': 'apply_risk_id',
   'label_col': 'overdue_days',
@@ -438,9 +438,9 @@ verbose：是否打印log
 
 ```python
 params['transformer'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'test': '/Users/muzhen/dev/flow_0/spliter/test/spliter_result.pkl',
-  'train': '/Users/muzhen/dev/flow_0/spliter/train/spliter_result.pkl'},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/transformer'},
+  'test': '',
+  'train': ''},
+ 'out': {'dst': ''},
  'st': {'cate': [{'cols': [],
     'encoders': [{'method': 'BaseEncoder',
       'params': {'cate_thr': 0.5, 'missing_thr': 0.8, 'same_thr': 0.9}},
@@ -573,9 +573,9 @@ st: list.每个元素为一个dict，包含method和parmas两个key，
 
 ```python
 params['filter'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'test': '/Users/muzhen/dev/flow_0/transformer/test/transformer_result.pkl',
-  'train': '/Users/muzhen/dev/flow_0/transformer/train/transformer_result.pkl'},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/filter'},
+  'test': '',
+  'train': ''},
+ 'out': {'dst': ''},
  'st': [{'method': 'StableFilter',
    'params': {'n_features_to_select': 60,
                'estimator': {'method': 'LogisticRegression',
@@ -658,9 +658,9 @@ opt_encoder：dict, 优化器配置，like {"method": "BayesianOptimizer", "para
 
 ```python
 params['optimizer'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'test': '/Users/muzhen/repo/modelling/modelling/flow/filter/test/filter_result.pkl',
-  'train': '/Users/muzhen/repo/modelling/modelling/flow/filter/train/filter_result.pkl'},
- 'out': {'dst': '/Users/muzhen/repo/modelling/modelling/flow/optimizer'},
+  'test': '',
+  'train': ''},
+ 'out': {'dst': ''},
  'st': {'estimator': {'method': 'XGBClassifier',
    'params': {'gamma': [0, 1],
     'learning_rate': [0.001, 0.8],
@@ -746,9 +746,9 @@ refers:
 
 ```python
 params['trainer'] = {'ds': {'label': {'name': '14d', 'type': 'number'},
-  'test': '/Users/muzhen/dev/flow_0/filter/test/filter_result.pkl',
-  'train': '/Users/muzhen/dev/flow_0/filter/train/filter_result.pkl'},
- 'out': {'dst': '/Users/muzhen/dev/flow_0/trainer'},
+  'test': '',
+  'train': ''},
+ 'out': {'dst': ''},
  'st': {'cut_off_sample_ratio': 1,
   'cut_off_use_weights': True,
   'n_folds': 5,
